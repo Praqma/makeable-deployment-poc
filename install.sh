@@ -17,4 +17,4 @@ docker build -t makeable/idea:latest .)
 
 # Start docker-compose
 (cd compose
-docker-compose -f ./makeable-dev.yml up)
+docker-compose -f ./makeable-prod.yml up)

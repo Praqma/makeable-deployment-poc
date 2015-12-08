@@ -13,7 +13,7 @@ php:
   links:
     - db:db
 db:
-  image: makable/mysql
+  image: makeable/mysql
   container_name: mysql
   hostname: mysql
   volumes_from:
