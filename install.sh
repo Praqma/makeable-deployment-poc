@@ -9,7 +9,11 @@ docker build -t makeable/php:latest .)
 
 # Build our MySql database container
 (cd images/mysql/context
-docker build -t makable/mysql:latest .)
+docker build -t makeable/mysql:latest .)
+
+# Build our Idea container
+(cd images/idea/context
+docker build -t makeable/idea:latest .)
 
 # Start docker-compose
 (cd compose
