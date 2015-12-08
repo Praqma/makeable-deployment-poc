@@ -1,0 +1,10 @@
+php:
+  image: makeable/php
+  container_name: php
+  hostname: php
+  expose:
+    - "80"
+  ports:
+    - "80:80"
+  environment:
+    - makeable_repo=https://github.com/Praqma/makeable-code.git
