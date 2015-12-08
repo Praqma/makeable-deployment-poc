@@ -1,4 +1,5 @@
-FROM ubuntu:latest
+#FROM ubuntu:latest
+FROM debian:jessie
 
 MAINTAINER Dan Pupius <dan@pupi.us>
 

@@ -1,0 +1,24 @@
+php:
+  image: makeable/php
+  container_name: php
+  hostname: php
+  expose:
+    - "80"
+  ports:
+    - "80:80"
+  environment:
+    - makeable_repo=https://github.com/Praqma/makeable-code.git
+  volumes_from:
+    - datacontainer
+  links:
+    - db:db
+db:
+  image: makable/mysql
+  container_name: mysql
+  hostname: mysql
+  volumes_from:
+    - datacontainer
+  expose:
+    - "3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=password
