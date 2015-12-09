@@ -22,6 +22,9 @@ RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=acc
 RUN wget http://download-cf.jetbrains.com/idea/ideaIC-15.0.1.tar.gz && tar xvzf ideaIC-15.0.1.tar.gz && rm -f ideaIC-15.0.1.tar.gz
 ENV PATH /idea-IC-143.382.35/bin:$PATH
 
+# Create a volume for our website.
+VOLUME /var/www/site
+
 RUN ln -s /var/www/site /workspace
 
 # Execute idea start script to launch it.

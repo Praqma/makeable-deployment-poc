@@ -5,6 +5,8 @@ idea:
   environment:
     - DISPLAY
   net: host
+  volumes_from:
+    - datacontainer
 php:
   image: makeable/php
   container_name: php

@@ -11,6 +11,10 @@ docker build -t makeable/php:latest .)
 (cd images/mysql/context
 docker build -t makeable/mysql:latest .)
 
+# Build our Idea container
+(cd images/idea/context
+docker build -t makeable/idea:latest .)
+
 # Start docker-compose
 (cd compose
-docker-compose -f ./makeable-prod.yml up)
+docker-compose -f ./makeable-dev.yml up)
