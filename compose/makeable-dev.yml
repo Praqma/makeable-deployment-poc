@@ -1,7 +1,6 @@
 idea:
   image: makeable/idea
   container_name: idea
-  hostname: idea
   environment:
     - DISPLAY
   net: host
