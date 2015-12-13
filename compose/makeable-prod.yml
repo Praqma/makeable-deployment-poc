@@ -8,6 +8,7 @@ php:
     - "80:80"
   environment:
     - makeable_repo=https://github.com/Praqma/makeable-code.git
+    - LOCATION=PRODUCTION
   volumes_from:
     - datacontainer
   links:

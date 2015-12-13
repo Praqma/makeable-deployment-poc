@@ -1,11 +1,11 @@
-idea:
-  image: makeable/idea
-  container_name: idea
-  environment:
-    - DISPLAY
-  net: host
-  volumes_from:
-    - datacontainer
+#idea:
+#  image: makeable/idea
+#  container_name: idea
+#  environment:
+#    - DISPLAY
+#  net: host
+#  volumes_from:
+#    - datacontainer
 php:
   image: makeable/php
   container_name: php
@@ -16,6 +16,7 @@ php:
     - "80:80"
   environment:
     - makeable_repo=https://github.com/Praqma/makeable-code.git
+    - LOCATION=dev
   volumes_from:
     - datacontainer
   links:
