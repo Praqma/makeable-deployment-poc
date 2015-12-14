@@ -25,8 +25,8 @@ docker-machine --debug create \
         --openstack-floatingip-pool Public  \
         --openstack-ssh-user ubuntu  \
         --openstack-sec-groups default,DockerAPI  \
-        makeabledemo  
+        productDemo  
 
 echo " - Setting up docker client to point at new instance..."
-eval "$(docker-machine env makeabledemo)"
-echo " - IP of OpenStack instance makeabledemo is : $(docker-machine ip makeabledemo)"
+eval "$(docker-machine env productdemo)"
+echo " - IP of OpenStack instance productdemo is : $(docker-machine ip productdemo)"

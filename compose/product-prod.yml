@@ -1,13 +1,5 @@
-#idea:
-#  image: makeable/idea
-#  container_name: idea
-#  environment:
-#    - DISPLAY
-#  net: host
-#  volumes_from:
-#    - datacontainer
 php:
-  image: makeable/php
+  image: product/php
   container_name: php
   hostname: php
   expose:
@@ -15,14 +7,14 @@ php:
   ports:
     - "80:80"
   environment:
-    - makeable_repo=https://github.com/Praqma/makeable-code.git
-    - LOCATION=dev
+    - product_repo=https://github.com/Praqma/web-deployment-poc--code.git
+    - LOCATION=PRODUCTION
   volumes_from:
     - datacontainer
   links:
     - db:db
 db:
-  image: makeable/mysql
+  image: product/mysql
   container_name: mysql
   hostname: mysql
   volumes_from:

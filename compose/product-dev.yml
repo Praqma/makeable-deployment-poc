@@ -1,5 +1,5 @@
 php:
-  image: makeable/php
+  image: product/php
   container_name: php
   hostname: php
   expose:
@@ -7,14 +7,14 @@ php:
   ports:
     - "80:80"
   environment:
-    - makeable_repo=https://github.com/Praqma/makeable-code.git
-    - LOCATION=PRODUCTION
+    - product_repo=https://github.com/Praqma/makeable-code.git
+    - LOCATION=dev
   volumes_from:
     - datacontainer
   links:
     - db:db
 db:
-  image: makeable/mysql
+  image: product/mysql
   container_name: mysql
   hostname: mysql
   volumes_from:
